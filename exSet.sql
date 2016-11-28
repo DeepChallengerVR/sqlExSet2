@@ -13,3 +13,8 @@ WHERE terms_id = 6;
 DELETE FROM terms
 WHERE terms_id = 6;	
 
+-- ex4
+INSERT INTO invoices VALUES 
+	(NULL, 32, 'AX-014-027', '8/1/2011', 434.58, 0.00, 0.00, 2, '8/31/2011', NULL);
+    
+
