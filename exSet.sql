@@ -17,4 +17,12 @@ WHERE terms_id = 6;
 INSERT INTO invoices VALUES 
 	(NULL, 32, 'AX-014-027', '8/1/2011', 434.58, 0.00, 0.00, 2, '8/31/2011', NULL);
     
+-- ex5
+INSERT INTO invoice_line_items(invoice_id, account_number, line_item_amount, line_item_description)
+	(SELECT invoice_id FROM invoices WHERE invoice_number = 'AX-014-027',
+		1, 160, 180.23, 'Hard Drive'), 
+	(SELECT invoice_id FROM invoices WHERE invoice_number = 'AX-014-027',
+		2, 527, 254.35, 'Exhange Server Update');
+        
 
+	
